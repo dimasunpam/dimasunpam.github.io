@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <div style="text-align: center;">
+            <h2>Video Dimas Adjie</h2>
+            <button onclick="tekanpause()">Play/Pause</button>
+            <button onclick="menjadibig()">Big</button>
+            <button onclick="menjadismall()">Small</button>
+            <button onclick="menjadinormal()">Normal</button>
+            <a href="sheila.mp4" download>
+                <button>Download</button>
+            </a>
+            <br><br>
+            <video id="videoku" title="Video" width="700">
+                <source src="sheila.mp4" type="video/mp4">
+                Browser anda tidak support video HTML 5
+            </video>            
+        </div>
+
+        <script>
+            var videoaku = document.getElementById("videoku");
+            function tekanpause(){
+                if (videoaku.paused)
+                videoaku.play();
+                else
+                videoaku.pause();
+            }
+            function menjadibig(){
+                videoaku.width = 1000;
+            }
+            function menjadismall() {
+                videoaku.width = 320;
+            }
+            function menjadinormal() {
+                videoaku.width = 700;
+            }
+        </script> 
+    </body>
+</html>
